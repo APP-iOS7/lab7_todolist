@@ -71,9 +71,22 @@ function addTodo(text, checked = false) {
             todos[index].text = newTodoText.trim();
             saveTodos(todos);
         }
+
+        if (newTodoText == "") {
+            alert("텍스트를 입력하지 않았습니다!");
+        }
+        else {
+            todos.push({ text: newTodoText });
+            todoInput.value = "";
+            saveTodos();
+            renderTodos();
+        }
+
+
+
     });
 
- 
+
     li.prepend(checkbox);
     li.append(spanElement);
     li.append(editButton);
