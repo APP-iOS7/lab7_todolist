@@ -1,7 +1,5 @@
 # Lap7 TodoList
 
-
-
 |이름|구현 기능|
 |------|---|
 |강보현|할 일 추가, 데이터 저장(localStorage), filter|
