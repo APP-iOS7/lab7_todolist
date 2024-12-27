@@ -1,0 +1,49 @@
+JavaScript
+
+// 수정할 할 일의 ID를 받아옵니다.
+const todoId = 1; 
+
+// 수정할 내용을 객체로 만듭니다.
+const updatedTodo = {
+  title: "수정된 할 일 제목",
+  content: "수정된 할 일 내용",
+  completed: true // 완료 여부 (true 또는 false)
+};
+
+// fetch API를 사용하여 서버에 PUT 요청을 보냅니다.
+fetch(`/todos/${todoId}`, {
+  method: "PUT",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(updatedTodo)
+})
+.then(response => response.json())
+.then(data => {
+  // 서버에서 응답을 받아 처리합니다.
+  console.log("할 일이 수정되었습니다:", data);
+  // 수정된 내용을 화면에 반영합니다.
+  // ...
+})
+.catch(error => {
+  // 오류 발생 시 처리합니다.
+  console.error("할 일 수정 중 오류 발생:", error);
+});
+코드 설명:
+
+수정할 할 일 ID: todoId 변수에 수정할 할 일의 ID를 저장합니다. 이 값은 실제로 수정할 항목의 ID로 바꿔야 합니다.
+수정할 내용: updatedTodo 객체에 수정할 제목, 내용, 완료 여부 등을 담습니다.
+PUT 요청: fetch API를 사용하여 서버의 /todos/${todoId} URL에 PUT 요청을 보냅니다.
+method: "PUT": PUT 요청은 기존 데이터를 수정할 때 사용합니다.
+headers: 요청 body의 데이터 형식이 JSON임을 알려줍니다.
+body: 수정할 내용을 JSON 형식으로 변환하여 요청 body에 담습니다.
+응답 처리: 서버에서 응답을 받으면 .then() 메서드를 사용하여 처리합니다.
+response.json(): 서버에서 보낸 JSON 응답을 JavaScript 객체로 변환합니다.
+console.log(): 수정된 데이터를 콘솔에 출력합니다.
+화면 반영: 수정된 내용을 화면에 업데이트하는 코드를 추가해야 합니다. (예: 할 일 목록을 다시 불러오거나, 해당 항목만 수정)
+오류 처리: .catch() 메서드를 사용하여 요청 중 발생한 오류를 처리합니다.
+참고:
+
+위 코드는 서버 측에서 REST API를 제공한다고 가정합니다.
+실제 구현은 사용하는 프레임워크나 라이브러리에 따라 달라질 수 있습니다.
+화면에 수정된 내용을 반영하는 방법은 다양하며, 사용하는 UI 라이브러리나 프레임워크에 맞는 방법을 사용해야 합니다.
