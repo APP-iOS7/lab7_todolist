@@ -1,0 +1,19 @@
+.btn-primary {
+    background-color: #5586EB
+}
+
+body {
+    background-color: #F6F6F6
+}
+
+.list-group-item {
+    border-left: 4px solid #5586EB;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.list-group-item:hover {
+    background-color: #E7E7E7;
+    transform: translateX(5px);
+}
