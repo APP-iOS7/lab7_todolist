@@ -1,20 +1,44 @@
 /* 완료된 항목에 줄긋기 스타일 */
 .todo-text.completed {
-    text-decoration: line-through; /* 줄긋기 */
-    color: gray; /* 회색으로 표시 */
-    font-style: italic; /* 이탤릭체로 표시 */
+    text-decoration: line-through;
+    /* 줄긋기 */
+    color: gray;
+    /* 회색으로 표시 */
+    font-style: italic;
+    /* 이탤릭체로 표시 */
 }
 
-  /* 체크박스 크기 조정 */
+/* 체크박스 크기 조정 */
 .complete-checkbox {
     margin-right: 10px;
     width: 18px;
     height: 18px;
 }
+
 /* 버튼 스타일 */
 .btn-primary {
     background-color: #5586EB;
     color: white;
+}
+
+.btn-warning {
+    background-color: #FFA500;
+    color: white;
+    border: none;
+}
+
+.btn-warning:hover {
+    background-color: #FF8C00;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #FF6B6B;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #FF4444;
 }
 
 /* 배경 스타일 */
@@ -32,9 +56,36 @@ body {
 
 .list-group-item:hover {
     background-color: #E7E7E7;
-    transform: translateX(5px);
+    transform: translateY(-2px);
 }
 
 .btn-secondary {
     background-color: #5586EB;
+}
+
+/* 체크박스 스타일 */
+.form-check-input {
+    cursor: pointer;
+    border-color: #5586EB;
+}
+
+.form-check-input:checked {
+    background-color: #5586EB;
+    border-color: #5586EB;
+}
+
+/* 네비게이션 바 스타일 */
+.navbar {
+    background-color: #333333;
+    padding: 0.5rem 0;
+}
+
+
+/* 타이틀 스타일 */
+h1 {
+    font-size: 3rem;
+    color: white;
+    background-color: #5586EB;
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
 }
